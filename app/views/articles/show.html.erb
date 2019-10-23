@@ -1,0 +1,23 @@
+<div class="container-fluid">
+
+  <div class="navbar-header">
+    <h3> <a class="navbar-brand">Wikinimous</a> <a class="navbar-collapse" href="/articles"> Go Back</a></h3>
+  </div>
+
+</div>
+
+<div class="container">
+ <h1 class="article"> <%= @article.title %>
+
+     <button class="btn">
+       <%= link_to "Edit", edit_path%>
+     </button>
+
+     <button class="btn">
+       <%= link_to "Delete", article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+     </button>
+</h1>
+  <p> <%= @article.content %> </p>
+</div>
