@@ -1,23 +1,24 @@
 <div class="container-fluid">
-
   <div class="navbar-header">
     <h3> <a class="navbar-brand">Wikinimous</a> <a class="navbar-collapse" href="/articles"> Go Back</a></h3>
   </div>
-
 </div>
 
 <div class="container">
- <h1 class="article"> <%= @article.title %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title"><%= @article.title %>
+        <button class="btn">
+           <%= link_to "Edit", edit_path%>
+         </button>
 
-     <button class="btn">
-       <%= link_to "Edit", edit_path%>
-     </button>
-
-     <button class="btn">
-       <%= link_to "Delete", article_path(@article),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-     </button>
-</h1>
-  <p> <%= @article.content %> </p>
+         <button class="btn">
+           <%= link_to "Delete", article_path(@article),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+         </button>
+      </h5>
+      <p class="card-text"><%= @article.long_text %></p>
+    </div>
+  </div>
 </div>

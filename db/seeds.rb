@@ -10,6 +10,7 @@
   Article.create(
     title: Faker::Restaurant.name,
     content: Faker::Lorem.sentence(word_count: 20),
+    long_text: Faker::Lorem.sentence(word_count: 500),
     image: "assets/#{rand(1..8)}.jpg"
   )
 end
