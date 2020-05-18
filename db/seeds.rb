@@ -6,9 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do
+8.times do
   Article.create(
     title: Faker::Restaurant.name,
-    content: Faker::Restaurant.description
+    content: Faker::Lorem.sentence(word_count: 20),
+    image: "assets/#{rand(1..8)}.jpg"
   )
 end
