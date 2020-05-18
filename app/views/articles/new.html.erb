@@ -1,34 +1,32 @@
 <div class="container-fluid">
-
   <div class="navbar-header">
     <h3> <a class="navbar-brand">Wikinimous</a> <a class="navbar-collapse" href="/articles"> Go Back </a></h3>
   </div>
-
 </div>
 
 
-<div class="containers">
-<h1> New Article </h1>
+<div class="container">
+  <div class="card" style="width: 30rem;">
+    <div class="card-body">
+      <h5 class="card-title">New Article</h5>
 
-<%= form_for(@article) do |f| %>
+      <%= form_for(@article) do |f| %>
 
- <div>
-  <div class="form">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
+       <div class="card-text">
+        <div class="form">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+
+        <div class="forms">
+          <%= f.label :content %>
+          <%= f.text_field :content, class: 'form-control' %>
+        </div>
+
+        <%= f.submit value = "Create Article", class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="forms">
-    <%= f.label :content %>
-    <%= f.text_field :content, class: 'form-control' %>
-  </div>
-
-  <%= f.submit value = "Create Article", class: 'btn btn-primary' %>
-  <% end %>
 </div>
 
-<div>
-  <%= link_to "Back" , articles_path %>
-</div>
-
-</div>

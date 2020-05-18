@@ -25,6 +25,13 @@ h1 a {
 .navbar-collapse {
   float: right !important;
   margin-right: 20px;
+  font-size: 1.25rem;
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.navbar-collapse:hover {
+  text-decoration: none;
 }
 
 .container-fluid {
@@ -34,6 +41,7 @@ h1 a {
   width: 100%;
   left: 0;
   top: 0;
+  margin-bottom: 20px;
 }
 
 .navbar-default {
@@ -58,12 +66,9 @@ h1 a {
   justify-content:center;
 }
 
-.containers {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: 400px;
-  margin-left: 600px;
-  margin-top: 90px;
+.container {
+  display:flex;
+  justify-content:center;
 }
 
 .container-two{
